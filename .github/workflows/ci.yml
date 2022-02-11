@@ -1,0 +1,23 @@
+name: CI
+
+on:
+  push:
+    branches: 
+      - develop
+      - master
+  pull_request:
+  workflow_dispatch:
+
+jobs:
+  xcode:
+    runs-on: macos-11
+    strategy:
+      matrix:
+        xcode: ["12.5.1", "13.2.1"]
+      fail-fast: false
+    name: Xcode ${{ matrix.xcode }}
+    env:
+      DEVELOPER_DIR: "/Applications/Xcode_${{ matrix.xcode }}.app/Contents/Developer"
+    steps:
+       - uses: actions/checkout@v2
+       - run: xcodebuild clean build test -workspace ActionSheetPicker-3.0.xcworkspace -scheme CoreActionSheetPicker -sdk iphonesimulator -destination "name=iPhone 11 Pro" | xcpretty -c
