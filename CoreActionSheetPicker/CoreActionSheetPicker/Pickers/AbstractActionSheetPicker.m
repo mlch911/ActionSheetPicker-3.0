@@ -798,8 +798,9 @@ CG_INLINE BOOL isIPhone4() {
 #pragma mark UIGestureRecognizerDelegate
 
 - (BOOL)gestureRecognizerShouldBegin:(UIGestureRecognizer *)gestureRecognizer {
-    CGPoint location = [gestureRecognizer locationInView:self.toolbar];
-    return !CGRectContainsPoint(self.toolbar.bounds, location);
+    CGPoint toolbarLocation = [gestureRecognizer locationInView:self.toolbar];
+    CGPoint actionSheetLocation = [gestureRecognizer locationInView:self.actionSheet];
+    return !(CGRectContainsPoint(self.toolbar.bounds, toolbarLocation) || CGRectContainsPoint(self.actionSheet.bgView.frame, actionSheetLocation));
 }
 
 @end
