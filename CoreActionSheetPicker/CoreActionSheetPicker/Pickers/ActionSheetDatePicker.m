@@ -41,7 +41,7 @@
 @synthesize datePickerStyle = _datePickerStyle;
 
 
--(UIDatePickerStyle)datePickerStyle {
+- (UIDatePickerStyle)datePickerStyle {
     if (_datePickerStyle != UIDatePickerStyleAutomatic) {
         return _datePickerStyle;
     } else {
@@ -168,7 +168,7 @@
 }
 
 - (UIView *)configuredPickerView {
-    CGRect datePickerFrame = CGRectMake(0, 40, self.viewSize.width, 216);
+    CGRect datePickerFrame = CGRectMake(0, 44, self.viewSize.width, self.getDatePickerHeight);
     UIDatePicker *datePicker = [[UIDatePicker alloc] initWithFrame:datePickerFrame];
     datePicker.datePickerMode = self.datePickerMode;
     datePicker.maximumDate = self.maximumDate;
@@ -290,14 +290,13 @@
     }
 }
 
-- (CGFloat)getDatePickerHeight
-{
+- (CGFloat)getDatePickerHeight {
     CGFloat height = 216.0;
 #if __IPHONE_OS_VERSION_MAX_ALLOWED >= 140000 // Xcode 12 and iOS 14, or greater
     if (@available(iOS 14.0, *)) {
-        if (_datePickerStyle == UIDatePickerStyleCompact) {
+        if (self.datePickerStyle == UIDatePickerStyleCompact) {
             height = 90.0;
-        } else if (_datePickerStyle == UIDatePickerStyleInline) {
+        } else if (self.datePickerStyle == UIDatePickerStyleInline) {
             switch (_datePickerMode) {
                 case UIDatePickerModeDate:
                     height = 350.0;
