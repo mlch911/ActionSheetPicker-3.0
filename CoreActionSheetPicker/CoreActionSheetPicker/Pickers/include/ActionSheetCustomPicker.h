@@ -7,8 +7,8 @@
 //
 #import <UIKit/UIKit.h>
 #if COCOAPODS
-#import <AbstractActionSheetPicker.h>
-#import <ActionSheetCustomPickerDelegate.h>
+#import "AbstractActionSheetPicker.h"
+#import "ActionSheetCustomPickerDelegate.h"
 #else
 #import <CoreActionSheetPicker/AbstractActionSheetPicker.h>
 #import <CoreActionSheetPicker/ActionSheetCustomPickerDelegate.h>

@@ -26,8 +26,8 @@
 //
 
 #if COCOAPODS
-#import <AbstractActionSheetPicker.h>
-#import <DistancePickerView.h>
+#import "AbstractActionSheetPicker.h"
+#import "DistancePickerView.h"
 #else
 #import <CoreActionSheetPicker/AbstractActionSheetPicker.h>
 #import <CoreActionSheetPicker/DistancePickerView.h>
