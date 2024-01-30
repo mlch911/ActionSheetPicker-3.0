@@ -25,11 +25,7 @@
 //SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 //
 
-#if COCOAPODS
 #import <AbstractActionSheetPicker.h>
-#else
-#import <CoreActionSheetPicker/AbstractActionSheetPicker.h>
-#endif
 
 @class ActionSheetLocalePicker;
 typedef void(^ActionLocaleDoneBlock)(ActionSheetLocalePicker *picker, NSTimeZone * selectedValue);

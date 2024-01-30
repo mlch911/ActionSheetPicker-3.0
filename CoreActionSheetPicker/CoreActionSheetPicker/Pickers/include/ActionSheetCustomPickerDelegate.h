@@ -7,11 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-#if COCOAPODS
 #import <AbstractActionSheetPicker.h>
-#else
-#import <CoreActionSheetPicker/AbstractActionSheetPicker.h>
-#endif
 
 @protocol ActionSheetCustomPickerDelegate <UIPickerViewDelegate, UIPickerViewDataSource>
 

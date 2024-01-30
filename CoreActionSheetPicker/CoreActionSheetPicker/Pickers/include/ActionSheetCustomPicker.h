@@ -6,13 +6,8 @@
 //  Copyright (c) 2012 Club 15CC. All rights reserved.
 //
 #import <UIKit/UIKit.h>
-#if COCOAPODS
 #import <AbstractActionSheetPicker.h>
 #import <ActionSheetCustomPickerDelegate.h>
-#else
-#import <CoreActionSheetPicker/AbstractActionSheetPicker.h>
-#import <CoreActionSheetPicker/ActionSheetCustomPickerDelegate.h>
-#endif
 
 @interface ActionSheetCustomPicker : AbstractActionSheetPicker
 {
