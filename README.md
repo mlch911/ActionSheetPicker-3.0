@@ -9,9 +9,7 @@
 
 ## Important update
 
-Now I fixed most of the things and merge PR' (thanks to [![All Contributors](https://img.shields.io/badge/all_contributors-20-orange.svg?style=flat-square)](#contributors-)).
-
-I did much work to support this library from iOS 5. (and till iOS 13 and we keep going) 🚀
+Wei18 is as a contributor for skywinder/ActionSheetPicker-3.0 currently. [ref](https://github.com/skywinder/ActionSheetPicker-3.0/pull/555#issuecomment-1914370568).
 
 ### [I still need help with the future support of this repo](https://github.com/skywinder/ActionSheetPicker-3.0/issues/348). If you are interested  to help - please **drop a comment into  issue #348 🙏**
 
