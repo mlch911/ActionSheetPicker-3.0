@@ -3,7 +3,7 @@ Pod::Spec.new do |spec|
   spec.version = '2.7.2'
   spec.summary = 'Easily present an ActionSheet with a PickerView, allowing the user to select from a number of immutable options.'
   spec.description  = <<-DESC
- Better version of ActionSheetPicker with support iOS7 and other improvements:
+ Better version of ActionSheetPicker with support iOS9 and other improvements:
    - Spawn pickers with convenience function - delegate or reference not required. Just provide a target/action callback.
    - Add buttons to UIToolbar for quick selection (see ActionSheetDatePicker below)
    - Delegate protocol available for more control
