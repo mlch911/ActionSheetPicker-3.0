@@ -293,26 +293,26 @@ CG_INLINE BOOL isIPhone4() {
         switch (self.tapDismissAction) {
             case TapActionDismiss: {
                 // add tap dismiss action
-                self.actionSheet.window.userInteractionEnabled = YES;
+                self.actionSheet.superview.userInteractionEnabled = YES;
                 UITapGestureRecognizer *tapAction = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(dismissPicker)];
                 tapAction.delegate = self;
-                [self.actionSheet.window addGestureRecognizer:tapAction];
+                [self.actionSheet.superview addGestureRecognizer:tapAction];
                 break;
             }
             case TapActionSuccess: {
                 // add tap success action with dismissPicker
-                self.actionSheet.window.userInteractionEnabled = YES;
+                self.actionSheet.superview.userInteractionEnabled = YES;
                 UITapGestureRecognizer *tapAction = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(actionPickerDone:)];
                 tapAction.delegate = self;
-                [self.actionSheet.window addGestureRecognizer:tapAction];
+                [self.actionSheet.superview addGestureRecognizer:tapAction];
                 break;
             }
             case TapActionCancel: {
                 // add tap cancel action with dismissPicker
-                self.actionSheet.window.userInteractionEnabled = YES;
+                self.actionSheet.superview.userInteractionEnabled = YES;
                 UITapGestureRecognizer *tapAction = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(actionPickerCancel:)];
                 tapAction.delegate = self;
-                [self.actionSheet.window addGestureRecognizer:tapAction];
+                [self.actionSheet.superview addGestureRecognizer:tapAction];
                 break;
             }
         };
