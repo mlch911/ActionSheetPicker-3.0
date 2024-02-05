@@ -6,15 +6,39 @@ on:
       - develop
 
 jobs:
-  xcode:
-    runs-on: macos-11
+  
+  build:
     strategy:
-      matrix:
-        xcode: ["12.5.1", "13.2.1"]
       fail-fast: false
-    name: Xcode ${{ matrix.xcode }}
+      matrix:
+        xcode: 
+          # - "12.5.1"
+          - "13.2.1"
+        os:
+          - macos-11
+          # - macos-latest
+        
+    runs-on: ${{ matrix.os }}  
     env:
       DEVELOPER_DIR: "/Applications/Xcode_${{ matrix.xcode }}.app/Contents/Developer"
     steps:
-       - uses: actions/checkout@v2
-       - run: xcodebuild clean build test -workspace ActionSheetPicker-3.0.xcworkspace -scheme CoreActionSheetPicker -sdk iphonesimulator -destination "name=iPhone 11 Pro" | xcpretty -c
+      - uses: actions/checkout@v4
+
+      - name: "Build SwiftPackage"
+        run: |
+          # Starting with Xcode 11, xcodebuild supports SwiftPM packages out of the box.
+          # ref: https://stackoverflow.com/a/62246008/9801139 
+          xcodebuild clean build \
+            -scheme CoreActionSheetPicker \
+            -sdk iphonesimulator \
+            -destination "name=iPhone 11 Pro"
+
+      - name: "Build CocoaPods"
+        run: |
+          gem install cocoapods
+          pod lib lint --allow-warnings
+
+      - name: "Build Carthage"
+        run: |
+          brew install carthage
+          carthage build --no-skip-current --use-xcframeworks
