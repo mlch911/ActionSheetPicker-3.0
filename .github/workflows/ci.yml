@@ -41,4 +41,4 @@ jobs:
       - name: "Build Carthage"
         run: |
           brew install carthage
-          carthage build --no-skip-current
+          carthage build --no-skip-current --use-xcframeworks
