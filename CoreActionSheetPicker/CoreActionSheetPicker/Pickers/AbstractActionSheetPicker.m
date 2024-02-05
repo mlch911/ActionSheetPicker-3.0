@@ -293,26 +293,26 @@ CG_INLINE BOOL isIPhone4() {
         switch (self.tapDismissAction) {
             case TapActionDismiss: {
                 // add tap dismiss action
-                self.actionSheet.window.userInteractionEnabled = YES;
+                self.actionSheet.superview.userInteractionEnabled = YES;
                 UITapGestureRecognizer *tapAction = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(dismissPicker)];
                 tapAction.delegate = self;
-                [self.actionSheet.window addGestureRecognizer:tapAction];
+                [self.actionSheet.superview addGestureRecognizer:tapAction];
                 break;
             }
             case TapActionSuccess: {
                 // add tap success action with dismissPicker
-                self.actionSheet.window.userInteractionEnabled = YES;
+                self.actionSheet.superview.userInteractionEnabled = YES;
                 UITapGestureRecognizer *tapAction = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(actionPickerDone:)];
                 tapAction.delegate = self;
-                [self.actionSheet.window addGestureRecognizer:tapAction];
+                [self.actionSheet.superview addGestureRecognizer:tapAction];
                 break;
             }
             case TapActionCancel: {
                 // add tap cancel action with dismissPicker
-                self.actionSheet.window.userInteractionEnabled = YES;
+                self.actionSheet.superview.userInteractionEnabled = YES;
                 UITapGestureRecognizer *tapAction = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(actionPickerCancel:)];
                 tapAction.delegate = self;
-                [self.actionSheet.window addGestureRecognizer:tapAction];
+                [self.actionSheet.superview addGestureRecognizer:tapAction];
                 break;
             }
         };
@@ -798,8 +798,9 @@ CG_INLINE BOOL isIPhone4() {
 #pragma mark UIGestureRecognizerDelegate
 
 - (BOOL)gestureRecognizerShouldBegin:(UIGestureRecognizer *)gestureRecognizer {
-    CGPoint location = [gestureRecognizer locationInView:self.toolbar];
-    return !CGRectContainsPoint(self.toolbar.bounds, location);
+    CGPoint toolbarLocation = [gestureRecognizer locationInView:self.toolbar];
+    CGPoint actionSheetLocation = [gestureRecognizer locationInView:self.actionSheet];
+    return !(CGRectContainsPoint(self.toolbar.bounds, toolbarLocation) || CGRectContainsPoint(self.actionSheet.bgView.frame, actionSheetLocation));
 }
 
 @end
