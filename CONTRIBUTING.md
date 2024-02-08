@@ -19,6 +19,8 @@ that one isn't already logged.
 Fork this repository, make it awesomer (preferably in a branch named for the
 topic), send a pull request!
 
+Bonus: Add a video/gif/image for your changes.
+
 All code contributions should match our [coding
 conventions](https://github.com/NYTimes/objective-c-style-guide).
 
