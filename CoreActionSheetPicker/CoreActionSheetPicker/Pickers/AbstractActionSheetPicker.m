@@ -326,10 +326,12 @@ CG_INLINE BOOL isIPhone4() {
 				sel = @selector(actionPickerCancel:);
                 break;
         };
-		self.pickerView.window.userInteractionEnabled = YES;
-		self.windowTapAction = [[UITapGestureRecognizer alloc] initWithTarget:self action:sel];
-		self.windowTapAction.delegate = self;
-		[self.pickerView.window addGestureRecognizer:self.windowTapAction];
+        if (sel) {
+            self.actionSheet.window.userInteractionEnabled = YES;
+            self.windowTapAction = [[UITapGestureRecognizer alloc] initWithTarget:self action:sel];
+            self.windowTapAction.delegate = self;
+            [self.actionSheet.window addGestureRecognizer:self.windowTapAction];
+        }
     }
 #pragma clang diagnostic pop
 }
@@ -819,15 +821,9 @@ CG_INLINE BOOL isIPhone4() {
 }
 
 - (BOOL)gestureRecognizerShouldBegin:(UIGestureRecognizer *)gestureRecognizer {
-	BOOL (^notInViewBlock)(UIView *) = ^BOOL(UIView *view) {
-		if (view) {
-			CGPoint location = [gestureRecognizer locationInView:view];
-			return !CGRectContainsPoint(view.bounds, location);
-		}
-		return YES;
-	};
-	
-	return notInViewBlock(self.toolbar) && notInViewBlock(self.pickerView);
+    CGPoint toolbarLocation = [gestureRecognizer locationInView:self.toolbar];
+    CGPoint actionSheetLocation = [gestureRecognizer locationInView:self.actionSheet];
+    return !(CGRectContainsPoint(self.toolbar.bounds, toolbarLocation) || CGRectContainsPoint(self.actionSheet.bgView.frame, actionSheetLocation));
 }
 
 @end

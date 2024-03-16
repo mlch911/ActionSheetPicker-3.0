@@ -2,7 +2,119 @@
 
 ## [Unreleased](https://github.com/skywinder/ActionSheetPicker-3.0/tree/HEAD)
 
-[Full Changelog](https://github.com/skywinder/ActionSheetPicker-3.0/compare/2.5.1...HEAD)
+[Full Changelog](https://github.com/skywinder/ActionSheetPicker-3.0/compare/2.7.3...HEAD)
+
+**Merged pull requests:**
+
+- add Wei18 as a contributor for infra, review, and maintenance [\#572](https://github.com/skywinder/ActionSheetPicker-3.0/pull/572) ([allcontributors[bot]](https://github.com/apps/allcontributors))
+- Update CONTRIBUTING.md [\#553](https://github.com/skywinder/ActionSheetPicker-3.0/pull/553) ([noorulain17](https://github.com/noorulain17))
+
+## [2.7.3](https://github.com/skywinder/ActionSheetPicker-3.0/tree/2.7.3) (2024-02-05)
+
+[Full Changelog](https://github.com/skywinder/ActionSheetPicker-3.0/compare/2.7.2...2.7.3)
+
+**Closed issues:**
+
+- Need secrets.COCOAPODS\_TRUNK\_TOKEN [\#565](https://github.com/skywinder/ActionSheetPicker-3.0/issues/565)
+- SWActionSheetVC.dismissTap prevents calendar from working in inline style [\#532](https://github.com/skywinder/ActionSheetPicker-3.0/issues/532)
+- iOS build error while using carthage update [\#472](https://github.com/skywinder/ActionSheetPicker-3.0/issues/472)
+
+**Merged pull requests:**
+
+- Update ActionSheetPicker-3.0.podspec to 2.7.3 [\#568](https://github.com/skywinder/ActionSheetPicker-3.0/pull/568) ([Wei18](https://github.com/Wei18))
+- Add job build in ci.yml for CocoaPods, Carthage, Swift Package [\#567](https://github.com/skywinder/ActionSheetPicker-3.0/pull/567) ([Wei18](https://github.com/Wei18))
+- Fixed DeployCocoaPods Github Action [\#566](https://github.com/skywinder/ActionSheetPicker-3.0/pull/566) ([Wei18](https://github.com/Wei18))
+- Add GitHub actions to deploy CocoaPods [\#564](https://github.com/skywinder/ActionSheetPicker-3.0/pull/564) ([Wei18](https://github.com/Wei18))
+- Fix date picker dismissing when tapping on date picker in .inline style [\#551](https://github.com/skywinder/ActionSheetPicker-3.0/pull/551) ([joeboyscout04](https://github.com/joeboyscout04))
+- Migrate CI from TravisCI to GitHubActions [\#546](https://github.com/skywinder/ActionSheetPicker-3.0/pull/546) ([Econa77](https://github.com/Econa77))
+
+## [2.7.2](https://github.com/skywinder/ActionSheetPicker-3.0/tree/2.7.2) (2024-01-30)
+
+[Full Changelog](https://github.com/skywinder/ActionSheetPicker-3.0/compare/2.7.1...2.7.2)
+
+**Fixed bugs:**
+
+- Current date is not available on compact Date picker style iOS 14.4 & above [\#534](https://github.com/skywinder/ActionSheetPicker-3.0/issues/534)
+- tapDismissAction broken after 2.5.1 [\#526](https://github.com/skywinder/ActionSheetPicker-3.0/issues/526)
+
+**Closed issues:**
+
+- Unable to build archieve on Xcode 14.3 [\#558](https://github.com/skywinder/ActionSheetPicker-3.0/issues/558)
+- SPM Issues [\#554](https://github.com/skywinder/ActionSheetPicker-3.0/issues/554)
+- ActionSheet opens in wrong display when iphone is connected to an external display. [\#548](https://github.com/skywinder/ActionSheetPicker-3.0/issues/548)
+- Picker not showing on iPad but only on iPhone [\#540](https://github.com/skywinder/ActionSheetPicker-3.0/issues/540)
+- Remove the pieces of the code for less than the Deployment Target [\#538](https://github.com/skywinder/ActionSheetPicker-3.0/issues/538)
+- Not working with Swift Package Manager \[bug\] [\#537](https://github.com/skywinder/ActionSheetPicker-3.0/issues/537)
+- "exported: true has no effect in '\_specialize' attribute" Issue at Xcode 12.5 [\#536](https://github.com/skywinder/ActionSheetPicker-3.0/issues/536)
+- Data Linkage with ActionSheetMultipleStringPicker [\#529](https://github.com/skywinder/ActionSheetPicker-3.0/issues/529)
+- Cannot use the library if is installed using Swift Package Manager [\#525](https://github.com/skywinder/ActionSheetPicker-3.0/issues/525)
+- Minimum iOS version [\#522](https://github.com/skywinder/ActionSheetPicker-3.0/issues/522)
+
+**Merged pull requests:**
+
+- Release 2.7.2 [\#562](https://github.com/skywinder/ActionSheetPicker-3.0/pull/562) ([Wei18](https://github.com/Wei18))
+- \[Fix\] import issue on Swift Pacakge [\#555](https://github.com/skywinder/ActionSheetPicker-3.0/pull/555) ([Wei18](https://github.com/Wei18))
+- Fixed an issue building using the Swift Package Manager [\#545](https://github.com/skywinder/ActionSheetPicker-3.0/pull/545) ([Econa77](https://github.com/Econa77))
+- Issue 538 - Remove conditional statements less than iOS9 [\#539](https://github.com/skywinder/ActionSheetPicker-3.0/pull/539) ([jolyot](https://github.com/jolyot))
+- Fixed \#526 \(`tapDismissAction` broken after 2.5.1\), Improved \#491 \(Background-tap to dismiss\) [\#528](https://github.com/skywinder/ActionSheetPicker-3.0/pull/528) ([noorulain17](https://github.com/noorulain17))
+- Fix SPM issue \(\#525\) [\#527](https://github.com/skywinder/ActionSheetPicker-3.0/pull/527) ([ghost](https://github.com/ghost))
+- Reduced minimum iOS version back to 9.0 [\#523](https://github.com/skywinder/ActionSheetPicker-3.0/pull/523) ([ddaddy](https://github.com/ddaddy))
+- Fix typo in the comment [\#521](https://github.com/skywinder/ActionSheetPicker-3.0/pull/521) ([ad-sho-loko](https://github.com/ad-sho-loko))
+
+## [2.7.1](https://github.com/skywinder/ActionSheetPicker-3.0/tree/2.7.1) (2020-10-26)
+
+[Full Changelog](https://github.com/skywinder/ActionSheetPicker-3.0/compare/2.6.1...2.7.1)
+
+**Implemented enhancements:**
+
+- Use with inputView [\#266](https://github.com/skywinder/ActionSheetPicker-3.0/issues/266)
+
+**Fixed bugs:**
+
+- Presenting picker fails when picker is presented within modally presented view controller on iPad \(iOS 13.7\) with ActionSheetPicker version 2.6.1. [\#513](https://github.com/skywinder/ActionSheetPicker-3.0/issues/513)
+
+**Closed issues:**
+
+- SPM: Cannot find type 'ActionSheetStringPicker' in scope [\#512](https://github.com/skywinder/ActionSheetPicker-3.0/issues/512)
+- iOS 14 unable to select date in inline datePickerStyle [\#505](https://github.com/skywinder/ActionSheetPicker-3.0/issues/505)
+- Wrong format specifier in example [\#344](https://github.com/skywinder/ActionSheetPicker-3.0/issues/344)
+
+**Merged pull requests:**
+
+- update settings [\#520](https://github.com/skywinder/ActionSheetPicker-3.0/pull/520) ([skywinder](https://github.com/skywinder))
+- Present picker on topViewController instead of rootViewController [\#519](https://github.com/skywinder/ActionSheetPicker-3.0/pull/519) ([noorulain17](https://github.com/noorulain17))
+- Issue 344 - Fixed typo in ReadMe for Objective C - NSInteger [\#518](https://github.com/skywinder/ActionSheetPicker-3.0/pull/518) ([noorulain17](https://github.com/noorulain17))
+- Issue 512 - Fixed SPM file scope/path issues [\#517](https://github.com/skywinder/ActionSheetPicker-3.0/pull/517) ([noorulain17](https://github.com/noorulain17))
+- Add Swift Package Manager instruction [\#516](https://github.com/skywinder/ActionSheetPicker-3.0/pull/516) ([cutmail](https://github.com/cutmail))
+- Issue \#505: iOS 14 unable to select date in inline datePickerStyle [\#514](https://github.com/skywinder/ActionSheetPicker-3.0/pull/514) ([palmtrae](https://github.com/palmtrae))
+
+## [2.6.1](https://github.com/skywinder/ActionSheetPicker-3.0/tree/2.6.1) (2020-10-07)
+
+[Full Changelog](https://github.com/skywinder/ActionSheetPicker-3.0/compare/2.6.0...2.6.1)
+
+**Implemented enhancements:**
+
+- update deprecated classes: UIPopoverPresentationController [\#499](https://github.com/skywinder/ActionSheetPicker-3.0/pull/499) ([cutmail](https://github.com/cutmail))
+
+**Fixed bugs:**
+
+- iOS14 datepicker style looks pretty bad! [\#500](https://github.com/skywinder/ActionSheetPicker-3.0/issues/500)
+
+**Closed issues:**
+
+- Date Picker Wheels Not Showing Anymore on iOS 14 [\#510](https://github.com/skywinder/ActionSheetPicker-3.0/issues/510)
+- carthage update fails for "2.6.0", is successful for "2.5.1". [\#507](https://github.com/skywinder/ActionSheetPicker-3.0/issues/507)
+- iOS 14 datePicker not centered horizontally [\#506](https://github.com/skywinder/ActionSheetPicker-3.0/issues/506)
+- Swift Package Manager [\#426](https://github.com/skywinder/ActionSheetPicker-3.0/issues/426)
+
+**Merged pull requests:**
+
+- Bottom padding for iPhone X style phones [\#511](https://github.com/skywinder/ActionSheetPicker-3.0/pull/511) ([palmtrae](https://github.com/palmtrae))
+- Fixed carthage build for Xcode \<12 [\#508](https://github.com/skywinder/ActionSheetPicker-3.0/pull/508) ([ddaddy](https://github.com/ddaddy))
+
+## [2.6.0](https://github.com/skywinder/ActionSheetPicker-3.0/tree/2.6.0) (2020-09-27)
+
+[Full Changelog](https://github.com/skywinder/ActionSheetPicker-3.0/compare/2.5.1...2.6.0)
 
 **Fixed bugs:**
 
@@ -17,10 +129,10 @@
 
 **Merged pull requests:**
 
+- udpate recommended settings, fixed warrings [\#504](https://github.com/skywinder/ActionSheetPicker-3.0/pull/504) ([skywinder](https://github.com/skywinder))
 - Fixed target for SPM - Package.swift file [\#503](https://github.com/skywinder/ActionSheetPicker-3.0/pull/503) ([noorulain17](https://github.com/noorulain17))
-- iOS 14 default datePickerStyle = wheels when not set in the app [\#502](https://github.com/skywinder/ActionSheetPicker-3.0/pull/502) ([noorulain17](https://github.com/noorulain17))
+- iOS 14 default datePickerStyle = wheels when not set in the app, Fixes Issue \#491 \(Background tap\) [\#502](https://github.com/skywinder/ActionSheetPicker-3.0/pull/502) ([noorulain17](https://github.com/noorulain17))
 - Updated contributers list [\#497](https://github.com/skywinder/ActionSheetPicker-3.0/pull/497) ([noorulain17](https://github.com/noorulain17))
-- Update source patterns [\#458](https://github.com/skywinder/ActionSheetPicker-3.0/pull/458) ([ElfSundae](https://github.com/ElfSundae))
 
 ## [2.5.1](https://github.com/skywinder/ActionSheetPicker-3.0/tree/2.5.1) (2020-09-01)
 
@@ -101,6 +213,7 @@
 **Merged pull requests:**
 
 - Fix rotation issues. [\#468](https://github.com/skywinder/ActionSheetPicker-3.0/pull/468) ([skywinder](https://github.com/skywinder))
+- Update source patterns [\#458](https://github.com/skywinder/ActionSheetPicker-3.0/pull/458) ([ElfSundae](https://github.com/ElfSundae))
 
 ## [2.4.1](https://github.com/skywinder/ActionSheetPicker-3.0/tree/2.4.1) (2019-12-24)
 
@@ -120,9 +233,9 @@
 
 **Merged pull requests:**
 
-- Add Discord link and fix some minor issues in README.md file [\#456](https://github.com/skywinder/ActionSheetPicker-3.0/pull/456) ([BubiDevs](https://github.com/BubiDevs))
+- Add Discord link and fix some minor issues in README.md file [\#456](https://github.com/skywinder/ActionSheetPicker-3.0/pull/456) ([andreabusi](https://github.com/andreabusi))
 - Fix podspec [\#455](https://github.com/skywinder/ActionSheetPicker-3.0/pull/455) ([ElfSundae](https://github.com/ElfSundae))
-- Improve Markdown syntax several .md files [\#452](https://github.com/skywinder/ActionSheetPicker-3.0/pull/452) ([BubiDevs](https://github.com/BubiDevs))
+- Improve Markdown syntax several .md files [\#452](https://github.com/skywinder/ActionSheetPicker-3.0/pull/452) ([andreabusi](https://github.com/andreabusi))
 
 ## [2.4.0](https://github.com/skywinder/ActionSheetPicker-3.0/tree/2.4.0) (2019-12-10)
 
@@ -175,7 +288,7 @@
 - CLI allcontributors setup [\#442](https://github.com/skywinder/ActionSheetPicker-3.0/pull/442) ([skywinder](https://github.com/skywinder))
 - xcode updates with missing variables [\#434](https://github.com/skywinder/ActionSheetPicker-3.0/pull/434) ([skywinder](https://github.com/skywinder))
 - should use  “weak” [\#429](https://github.com/skywinder/ActionSheetPicker-3.0/pull/429) ([xiaoer371](https://github.com/xiaoer371))
-- Add iOS 13 support - Handle UIWindow for iOS 13 changes [\#425](https://github.com/skywinder/ActionSheetPicker-3.0/pull/425) ([BubiDevs](https://github.com/BubiDevs))
+- Add iOS 13 support - Handle UIWindow for iOS 13 changes [\#425](https://github.com/skywinder/ActionSheetPicker-3.0/pull/425) ([andreabusi](https://github.com/andreabusi))
 - Support iOS 13 Dark Mode [\#421](https://github.com/skywinder/ActionSheetPicker-3.0/pull/421) ([arnoldxt](https://github.com/arnoldxt))
 - Attributed strings can be used as picker rows. Fixed accessibility for picker title. [\#403](https://github.com/skywinder/ActionSheetPicker-3.0/pull/403) ([xjki](https://github.com/xjki))
 - Fix run ActionSheetPickerTests on Xcode and Travis CI [\#393](https://github.com/skywinder/ActionSheetPicker-3.0/pull/393) ([nowsprinting](https://github.com/nowsprinting))
@@ -270,6 +383,7 @@
 **Merged pull requests:**
 
 - Use modern objective c initializer syntax [\#235](https://github.com/skywinder/ActionSheetPicker-3.0/pull/235) ([mamnun](https://github.com/mamnun))
+- Fixes presentation issue on iPads [\#131](https://github.com/skywinder/ActionSheetPicker-3.0/pull/131) ([maciekish](https://github.com/maciekish))
 
 ## [2.0.3](https://github.com/skywinder/ActionSheetPicker-3.0/tree/2.0.3) (2015-10-13)
 
@@ -343,6 +457,7 @@
 **Implemented enhancements:**
 
 - Dark Mode [\#102](https://github.com/skywinder/ActionSheetPicker-3.0/issues/102)
+- Add methods to custom background color ... [\#195](https://github.com/skywinder/ActionSheetPicker-3.0/pull/195) ([ainopara](https://github.com/ainopara))
 
 ## [1.6.2](https://github.com/skywinder/ActionSheetPicker-3.0/tree/1.6.2) (2015-05-07)
 
@@ -372,7 +487,6 @@
 
 - Integration ActionSheetPicker as dynamic framework [\#170](https://github.com/skywinder/ActionSheetPicker-3.0/issues/170)
 - Cancel Action unknow for `ActionSheetDistancePicker` [\#166](https://github.com/skywinder/ActionSheetPicker-3.0/issues/166)
-- Add methods to custom background color ... [\#195](https://github.com/skywinder/ActionSheetPicker-3.0/pull/195) ([ainopara](https://github.com/ainopara))
 - iOS 5.1.1 compatibility added [\#164](https://github.com/skywinder/ActionSheetPicker-3.0/pull/164) ([kashifhisam](https://github.com/kashifhisam))
 - Added "tag" to AbstractActionSheet [\#159](https://github.com/skywinder/ActionSheetPicker-3.0/pull/159) ([Jeepston](https://github.com/Jeepston))
 
@@ -501,6 +615,11 @@
 - UIDatePicker does not fire the target-action associated with the UIControlEventValueChanged event the first time [\#104](https://github.com/skywinder/ActionSheetPicker-3.0/issues/104)
 - Added workaround for a bug in UIDatePicker in count down mode. [\#105](https://github.com/skywinder/ActionSheetPicker-3.0/pull/105) ([tomaskraina](https://github.com/tomaskraina))
 
+**Merged pull requests:**
+
+- Add a Bitdeli Badge to README [\#107](https://github.com/skywinder/ActionSheetPicker-3.0/pull/107) ([bitdeli-chef](https://github.com/bitdeli-chef))
+- Added minimumDate and maximumDate to contructor of ActionSheetDatePicker [\#98](https://github.com/skywinder/ActionSheetPicker-3.0/pull/98) ([emmanuelay](https://github.com/emmanuelay))
+
 ## [1.3.6](https://github.com/skywinder/ActionSheetPicker-3.0/tree/1.3.6) (2014-12-02)
 
 [Full Changelog](https://github.com/skywinder/ActionSheetPicker-3.0/compare/1.3.5...1.3.6)
@@ -512,11 +631,6 @@
 **Closed issues:**
 
 - Travis builds is broken by fix \#96 [\#99](https://github.com/skywinder/ActionSheetPicker-3.0/issues/99)
-
-**Merged pull requests:**
-
-- Add a Bitdeli Badge to README [\#107](https://github.com/skywinder/ActionSheetPicker-3.0/pull/107) ([bitdeli-chef](https://github.com/bitdeli-chef))
-- Added minimumDate and maximumDate to contructor of ActionSheetDatePicker [\#98](https://github.com/skywinder/ActionSheetPicker-3.0/pull/98) ([emmanuelay](https://github.com/emmanuelay))
 
 ## [1.3.5](https://github.com/skywinder/ActionSheetPicker-3.0/tree/1.3.5) (2014-11-14)
 
@@ -659,6 +773,8 @@
 
 - Update SWActionSheet.m [\#60](https://github.com/skywinder/ActionSheetPicker-3.0/pull/60) ([zhongyang](https://github.com/zhongyang))
 - add block based API to date picker [\#56](https://github.com/skywinder/ActionSheetPicker-3.0/pull/56) ([mrtj](https://github.com/mrtj))
+- update badge [\#46](https://github.com/skywinder/ActionSheetPicker-3.0/pull/46) ([skywinder](https://github.com/skywinder))
+- Add badge [\#45](https://github.com/skywinder/ActionSheetPicker-3.0/pull/45) ([skywinder](https://github.com/skywinder))
 
 ## [1.1.13](https://github.com/skywinder/ActionSheetPicker-3.0/tree/1.1.13) (2014-09-19)
 
@@ -667,11 +783,6 @@
 **Closed issues:**
 
 - impossible to run in xcode 6 [\#48](https://github.com/skywinder/ActionSheetPicker-3.0/issues/48)
-
-**Merged pull requests:**
-
-- update badge [\#46](https://github.com/skywinder/ActionSheetPicker-3.0/pull/46) ([skywinder](https://github.com/skywinder))
-- Add badge [\#45](https://github.com/skywinder/ActionSheetPicker-3.0/pull/45) ([skywinder](https://github.com/skywinder))
 
 ## [1.1.12](https://github.com/skywinder/ActionSheetPicker-3.0/tree/1.1.12) (2014-09-17)
 
@@ -806,10 +917,6 @@
 
 [Full Changelog](https://github.com/skywinder/ActionSheetPicker-3.0/compare/1.0.13...1.0.14)
 
-**Merged pull requests:**
-
-- Set minimum date properly. [\#14](https://github.com/skywinder/ActionSheetPicker-3.0/pull/14) ([matt](https://github.com/matt))
-
 ## [1.0.13](https://github.com/skywinder/ActionSheetPicker-3.0/tree/1.0.13) (2014-07-30)
 
 [Full Changelog](https://github.com/skywinder/ActionSheetPicker-3.0/compare/1.0.12...1.0.13)
@@ -825,10 +932,6 @@
 ## [1.0.12](https://github.com/skywinder/ActionSheetPicker-3.0/tree/1.0.12) (2014-07-24)
 
 [Full Changelog](https://github.com/skywinder/ActionSheetPicker-3.0/compare/1.0.11...1.0.12)
-
-**Fixed bugs:**
-
-- Crash when using in 5s iOS 7.1 [\#8](https://github.com/skywinder/ActionSheetPicker-3.0/issues/8)
 
 **Closed issues:**
 
@@ -849,6 +952,7 @@
 
 **Fixed bugs:**
 
+- Crash when using in 5s iOS 7.1 [\#8](https://github.com/skywinder/ActionSheetPicker-3.0/issues/8)
 - On Iphone 4 the ActionSheetStringPicker doesn't work Well [\#5](https://github.com/skywinder/ActionSheetPicker-3.0/issues/5)
 
 ## [1.0.8](https://github.com/skywinder/ActionSheetPicker-3.0/tree/1.0.8) (2014-06-29)

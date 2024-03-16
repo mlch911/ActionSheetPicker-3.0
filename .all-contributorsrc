@@ -227,6 +227,17 @@
         "review",
         "maintenance"
       ]
+    },
+    {
+      "login": "Wei18",
+      "name": "Wei",
+      "avatar_url": "https://avatars.githubusercontent.com/u/11254896?v=4",
+      "profile": "https://www.linkedin.com/in/wei-cao-67b5b315a",
+      "contributions": [
+        "infra",
+        "review",
+        "maintenance"
+      ]
     }
   ],
   "contributorsPerLine": 7,
@@ -234,5 +245,6 @@
   "projectOwner": "skywinder",
   "repoType": "github",
   "repoHost": "https://github.com",
-  "skipCi": true
+  "skipCi": true,
+  "commitType": "docs"
 }
