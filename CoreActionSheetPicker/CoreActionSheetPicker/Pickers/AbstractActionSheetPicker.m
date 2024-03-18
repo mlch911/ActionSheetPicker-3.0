@@ -79,6 +79,8 @@ CG_INLINE BOOL isIPhone4() {
 @property(nonatomic, assign) SEL successAction;
 @property(nonatomic, assign) SEL cancelAction;
 @property(nonatomic, strong) UIViewController *popOverViewController;
+@property(nonatomic, strong) UITapGestureRecognizer *windowTapAction;
+@property(nonatomic, assign) NSInteger windowTapActionRetryCount;
 @property(nonatomic, strong) CIFilter *filter;
 @property(nonatomic, strong) CIContext *context;
 @property(nonatomic, strong) NSObject *selfReference;
@@ -287,38 +289,51 @@ CG_INLINE BOOL isIPhone4() {
         [self presentPickerForView:masterView];
     }
 
+	[self addTapDismissAction];
+}
+
+- (void)addTapDismissAction {
+	if (!self.pickerView) {
+		NSAssert(_pickerView != NULL, @"Picker view failed to instantiate, perhaps you have invalid component data.");
+		return;
+	}
+	if (self.windowTapActionRetryCount > 10) {
+		NSAssert(NO, @"Failed to find Picker view's window. This may cause a memory leak.");
+	}
+	if (!self.pickerView.window) {
+		self.windowTapActionRetryCount += 1;
+		dispatch_async(dispatch_get_main_queue(), ^{
+			[self addTapDismissAction];
+		});
+		return;
+	}
+	
 #pragma clang diagnostic push
 #pragma ide diagnostic ignored "UnavailableInDeploymentTarget"
     {
+		SEL sel;
         switch (self.tapDismissAction) {
-            case TapActionDismiss: {
+            case TapActionDismiss:
                 // add tap dismiss action
-                self.actionSheet.superview.userInteractionEnabled = YES;
-                UITapGestureRecognizer *tapAction = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(dismissPicker)];
-                tapAction.delegate = self;
-                [self.actionSheet.superview addGestureRecognizer:tapAction];
+				sel = @selector(dismissPicker);
                 break;
-            }
-            case TapActionSuccess: {
+            case TapActionSuccess:
                 // add tap success action with dismissPicker
-                self.actionSheet.superview.userInteractionEnabled = YES;
-                UITapGestureRecognizer *tapAction = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(actionPickerDone:)];
-                tapAction.delegate = self;
-                [self.actionSheet.superview addGestureRecognizer:tapAction];
+				sel = @selector(actionPickerDone:);
                 break;
-            }
-            case TapActionCancel: {
+            case TapActionCancel:
                 // add tap cancel action with dismissPicker
-                self.actionSheet.superview.userInteractionEnabled = YES;
-                UITapGestureRecognizer *tapAction = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(actionPickerCancel:)];
-                tapAction.delegate = self;
-                [self.actionSheet.superview addGestureRecognizer:tapAction];
+				sel = @selector(actionPickerCancel:);
                 break;
-            }
         };
+        if (sel) {
+            self.actionSheet.window.userInteractionEnabled = YES;
+            self.windowTapAction = [[UITapGestureRecognizer alloc] initWithTarget:self action:sel];
+            self.windowTapAction.delegate = self;
+            [self.actionSheet.window addGestureRecognizer:self.windowTapAction];
+        }
     }
 #pragma clang diagnostic pop
-
 }
 
 - (IBAction)actionPickerDone:(id)sender {
@@ -339,6 +354,7 @@ CG_INLINE BOOL isIPhone4() {
     self.actionSheet = nil;
     self.popOverViewController = nil;
     self.selfReference = nil;
+	[self.pickerView.window removeGestureRecognizer:self.windowTapAction];
 }
 
 #pragma mark - Custom Buttons
@@ -796,6 +812,13 @@ CG_INLINE BOOL isIPhone4() {
 }
 
 #pragma mark UIGestureRecognizerDelegate
+
+- (BOOL)gestureRecognizer:(UIGestureRecognizer *)gestureRecognizer shouldBeRequiredToFailByGestureRecognizer:(UIGestureRecognizer *)otherGestureRecognizer {
+	if (IS_IPAD) {
+		return YES;
+	}
+	return NO;
+}
 
 - (BOOL)gestureRecognizerShouldBegin:(UIGestureRecognizer *)gestureRecognizer {
     CGPoint toolbarLocation = [gestureRecognizer locationInView:self.toolbar];
