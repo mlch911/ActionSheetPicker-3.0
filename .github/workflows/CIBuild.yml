@@ -33,7 +33,7 @@ jobs:
           SCHEME: CoreActionSheetPicker
         run: |
           xcodebuild clean build -workspace ${WORKSPACE} -scheme ${SCHEME} \
-            -sdk iphoneos -destination "name=Any iOS Device"
+            -sdk iphonesimulator -destination "name=iPhone 11 Pro"
             
       - name: "Build scheme Swift-Example"
         env:
@@ -41,7 +41,7 @@ jobs:
           SCHEME: Swift-Example
         run: |
           xcodebuild clean build -workspace ${WORKSPACE} -scheme ${SCHEME} \
-            -sdk iphoneos -destination "name=Any iOS Device"
+            -sdk iphonesimulator -destination "name=iPhone 11 Pro"
 
       - name: "Build Swift Pacakge"
         env:
@@ -49,7 +49,7 @@ jobs:
           SCHEME: ActionSheetPicker-3.0
         run: |
           xcodebuild clean build -workspace ${WORKSPACE} -scheme ${SCHEME} \
-            -sdk iphoneos -destination "name=Any iOS Device"
+            -sdk iphonesimulator -destination "name=iPhone 11 Pro"
             
       - name: "Build CocoaPods"
         run: |
