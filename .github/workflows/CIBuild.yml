@@ -1,8 +1,6 @@
 name: CI Build
 
-on:
-  workflow_dispatch:
-  
+on:  
   push:
     branches: 
       - develop
@@ -29,21 +27,21 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       
-      - name: "Build scheme ${SCHEME}"
+      - name: "Build scheme CoreActionSheetPicker"
         env:
           WORKSPACE: ActionSheetPicker-3.0.xcworkspace
           SCHEME: CoreActionSheetPicker
         run: |
           xcodebuild clean build -workspace ${WORKSPACE} -scheme ${SCHEME} \
-            -sdk iphonesimulator -destination "name=iPhone 11 Pro"
+            -sdk iphoneos -destination "name=Any iOS Device"
             
-      - name: "Build scheme ${SCHEME}"
+      - name: "Build scheme Swift-Example"
         env:
           WORKSPACE: ActionSheetPicker-3.0.xcworkspace
           SCHEME: Swift-Example
         run: |
           xcodebuild clean build -workspace ${WORKSPACE} -scheme ${SCHEME} \
-            -sdk iphonesimulator -destination "name=iPhone 11 Pro"
+            -sdk iphoneos -destination "name=Any iOS Device"
 
       - name: "Build Swift Pacakge"
         env:
@@ -51,7 +49,7 @@ jobs:
           SCHEME: ActionSheetPicker-3.0
         run: |
           xcodebuild clean build -workspace ${WORKSPACE} -scheme ${SCHEME} \
-            -sdk iphonesimulator -destination "name=iPhone 11 Pro"
+            -sdk iphoneos -destination "name=Any iOS Device"
             
       - name: "Build CocoaPods"
         run: |
