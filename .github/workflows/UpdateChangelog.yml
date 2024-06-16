@@ -1,5 +1,8 @@
 name: Update Changelog
 
+env:
+  GEM_HOME: ~/gems
+
 on:
   schedule:
     # Will run at 01:00 on the 1st and 15th of every month 
@@ -18,10 +21,6 @@ jobs:
       - uses: ruby/setup-ruby@v1
         with:
           ruby-version: '3.1'
-      - uses: actions/cache@v4
-        with:
-          path: ${{ env.GEM_HOME }}
-          key: ${{ runner.os }}
       - name: "Update CHANGELOG.md"
         env:
           CHANGELOG_GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
