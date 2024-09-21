@@ -1,7 +1,7 @@
 name: Update Changelog
 
-env:
-  GEM_HOME: ~/gems
+# env:
+#   GEM_HOME: ~/gems
 
 on:
   schedule:
